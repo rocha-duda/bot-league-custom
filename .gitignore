@@ -1,0 +1,17 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+target/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+src/main/java/me/mariarocha/BotTeste/Token.java
