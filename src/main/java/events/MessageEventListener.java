@@ -10,7 +10,7 @@ public class MessageEventListener extends ListenerAdapter {
 	public void onMessageReceived(MessageReceivedEvent event) {
 		super.onMessageReceived(event);
 		if(event.getAuthor().isBot()){
-			System.out.println("O bot falou: " + event.getMessage().getContentDisplay()); //shows if it as user or a bot's message
+			System.out.println("O bot falou: " + event.getMessage().getContentDisplay()); 
 		}
 		else
 		System.out.println(event.getMessage().getMember().getUser().getEffectiveName() +" falou: " + event.getMessage().getContentDisplay());

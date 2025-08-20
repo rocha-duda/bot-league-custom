@@ -34,7 +34,7 @@ public class Bot {
 			Commands.slash("play", "O bot toca musica").addOption(OptionType.STRING, "song", "link da musica"),
 			Commands.slash("leave", "o bot sai do canal de voz"),
 			Commands.slash("tocandoagora", "o bot mostra o que ta tocando"),
-			Commands.slash("skip", "skipa a musica durhur")
+			Commands.slash("skip", "skipa a musica ")
 			).queue();
 
 	

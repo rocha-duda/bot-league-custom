@@ -27,14 +27,14 @@ public class MusicCommands extends ListenerAdapter {
 				if(event.getMember().getVoiceState().getChannel().equals(event.getGuild().getSelfMember().getVoiceState().getChannel())) {
 					
 					
-					//Digite o codigo de play aqui
+					
 					 OptionMapping songOption = event.getOption("song");
 					 String songUrl = songOption.getAsString();
 					 if(songOption.getAsString()== null) {
 						 event.reply("favor inserir um nome ou link").queue();
 					 }
 					 else
-					 //pra ver ser é link ou por nome:
+					 
 					 try {
 						 new URI(songUrl);
 					 }
@@ -61,7 +61,7 @@ public class MusicCommands extends ListenerAdapter {
 					event.reply("voce nao esta em um canal de voz para eu fazer isso").queue();
 				}
 			else if(event.getGuild().getSelfMember().getVoiceState().getChannel()!=null) {
-					event.reply("ja estou em um canal de voz, me tire nn").queue();
+					event.reply("erro: ja estou em um canal de voz").queue();
 				}
 				else {
 					event.reply("Entrando!").queue();
@@ -70,13 +70,13 @@ public class MusicCommands extends ListenerAdapter {
 			break;
 			case("leave")	:
 			if(event.getGuild().getSelfMember().getVoiceState().getChannel()==null) {
-				event.reply("Eu nao estou em um canal de voz, nao tenho como sair de nada").queue();
+				event.reply("Eu nao estou em um canal de voz para sair").queue();
 			}
 				else if(event.getGuild().getSelfMember().getVoiceState().getChannel().equals(event.getMember().getVoiceState().getChannel())) {
 					event.getGuild().getAudioManager().closeAudioConnection();
 					event.reply("Saindo!").queue();}
 					else {
-						event.reply("Eu nao estou no mesmo canal de voz que voce. Tome vergonha na cara").queue();
+						event.reply("Eu nao estou no mesmo canal de voz que voce").queue();
 					}
 			break;
 			case("skip")	:

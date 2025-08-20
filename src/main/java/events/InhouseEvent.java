@@ -39,7 +39,7 @@ public class InhouseEvent extends ListenerAdapter {
 		 event.getMessage().delete().queueAfter(1, TimeUnit.SECONDS);
 		User user = event.getAuthor();
 		if(queue.getUsers().contains(user)) {
-			event.getChannel().sendMessage("Você ja está na fila! Nao tente entrar novamento ou haverá severas consequências.").queue();
+			event.getChannel().sendMessage("Você ja está na fila!").queue();
 		}
 		else {	queue.add(user);
 		queue.setPlayers("");
@@ -116,7 +116,7 @@ public class InhouseEvent extends ListenerAdapter {
 	 else if(args[0].equalsIgnoreCase(prefix + "caio")) {
 	event.getChannel().sendMessage("https://imgur.com/a/xZWSK4B").queue();
 	 }
-	else if(args[0].equalsIgnoreCase(prefix + "petralha")) {
+	else if(args[0].equalsIgnoreCase(prefix + "irmaos")) {
 	event.getChannel().sendMessage("https://imgur.com/nWcHkFN").queue();
 		}
 	 else if(args[0].equalsIgnoreCase(prefix + "matshow")) {
